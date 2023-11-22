@@ -1,0 +1,14 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    printf("parental process start\n");
+    if(fork()==0) {
+        execl("/bin/echo", "echo", "hello", NULL);
+        fprintf(stderr,"first fail");
+        exit(1);
+    }
+    printf("parental process end\n");
+}
+
