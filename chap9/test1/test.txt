@@ -1,0 +1,11 @@
+'sleep 100&' : This command runs the sleep command in the background for 100 seconds. The & at the end of the command allows it to run in the background, so you can continue using the shell.
+
+'sleep 100&':  Similarly, this command runs another sleep command in the background for 100 seconds.
+
+'jobs' : This command displays a list of jobs currently running in the background. Since both commands were run in the background, you would see something like
+
+'ps -f' : This command displays a list of current processes in full format. You would see output similar to
+
+'kill %1' : This command sends a termination signal to the first job in the background. The %1 refers to the job number 1.
+
+'ps -f' : Running ps -f again would show that the process with PID 1234 (job number 1) has been terminated. The output might look like

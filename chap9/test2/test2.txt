@@ -1,0 +1,9 @@
+(echo START1; sleep 10; echo DONE1) & : This command runs a subshell in the background. Within the subshell, it echoes "START1," sleeps for 10 seconds, and then echoes "DONE1."
+
+(echo START2; sleep 10; echo DONE2) & : Similarly, this command runs another subshell in the background, echoing "START2," sleeping for 10 seconds, and echoing "DONE2."
+
+kill –KILL 첫 번째 프로세스 : This command sends a SIGKILL signal to the first process. The Korean text "첫 번째 프로세스" translates to "the first process." This will forcefully terminate the process without giving it a chance to clean up.
+
+kill –STOP 첫 번째 프로세스 : This command sends a SIGSTOP signal to the first process, suspending its execution.
+
+kill –CONT 첫 번째 프로세스 : This command sends a SIGCONT signal to the first process, allowing it to resume execution.
